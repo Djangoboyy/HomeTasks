@@ -15,7 +15,7 @@ if [ ! -d "$BUILD_FOLDER" ]; then
   mkdir -p "$BUILD_FOLDER"
 fi
 
-cd "$BUILD_FOLDER"
+# cd "$BUILD_FOLDER"
 
 # if [ ! -d "$SOURCE_FOLDER" ]; then
 #   mkdir -p "$SOURCE_FOLDER"
