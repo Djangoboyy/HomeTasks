@@ -68,24 +68,24 @@ void MergeSort(int arr[], int left, int right) {
 }
 
 // Main function to execute the program
-int main() {
-    // Example array to be sorted
-    int arr[] = {38, 27, 43, 3, 9, 82, 10};
-    int n = sizeof(arr) / sizeof(arr[0]); // Calculate number of elements
+// int main() {
+    // // Example array to be sorted
+    // int arr[] = {38, 27, 43, 3, 9, 82, 10};
+    // int n = sizeof(arr) / sizeof(arr[0]); // Calculate number of elements
 
-    cout << "Original Array: ";
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
+    // cout << "Original Array: ";
+    // for (int i = 0; i < n; i++)
+    //     cout << arr[i] << " ";
     
-    cout << endl;
+    // cout << endl;
 
-    MergeSort(arr, 0, n - 1); // Call merge sort on the array
+    // MergeSort(arr, 0, n - 1); // Call merge sort on the array
 
-    cout << "Sorted Array: ";
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
+    // cout << "Sorted Array: ";
+    // for (int i = 0; i < n; i++)
+    //     cout << arr[i] << " ";
 
-    cout << endl;
+    // cout << endl;
 
-    return 0;
-}
+    // return 0;
+// }

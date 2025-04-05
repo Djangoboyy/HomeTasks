@@ -15,14 +15,14 @@ if [ ! -d "$BUILD_FOLDER" ]; then
   mkdir -p "$BUILD_FOLDER"
 fi
 
-# cd "$BUILD_FOLDER"
+cd "$BUILD_FOLDER"
 
 # if [ ! -d "$SOURCE_FOLDER" ]; then
 #   mkdir -p "$SOURCE_FOLDER"
 # fi
 
 
-cmake -G $BUILD_TYPE $SOURCE_FOLDER
+cmake -G $BUILD_TYPE ../$SOURCE_FOLDER
 
 cmake --build .
 
