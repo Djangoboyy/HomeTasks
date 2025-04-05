@@ -16,8 +16,8 @@ namespace Djangoboyy {
     extern const MenuItem STUDY_OTHER_TECH;
 
     // Третий уровень меню
-    extern const STUDY_GO_BACK_OTHER_TECH;
-    extern const STUDY_DB;
-    extern const STUDY_CONCURRENT_PROG;
-    extern const STUDY_NET_TECH;
+    extern const MenuItem STUDY_GO_BACK_OTHER_TECH;
+    extern const MenuItem STUDY_DB;
+    extern const MenuItem STUDY_CONCURRENT_PROG;
+    extern const MenuItem STUDY_NET_TECH;
 }

@@ -37,7 +37,7 @@ const Djangoboyy::MenuItem Djangoboyy::STUDY_ADS = {
     "2 - Алгоритмы и структуры", Djangoboyy::study_ads, &Djangoboyy::STUDY
 };
 const Djangoboyy::MenuItem Djangoboyy::STUDY_OTHER_TECH = {
-    "3 - Другие технологии", Djangoboyy::study_other_tech, &Djangoboyy::STUDY, oth_tech_children, study_oth_tech_size
+    "3 - Другие технологии", Djangoboyy::show_menu, &Djangoboyy::STUDY, oth_tech_children, study_oth_tech_size
 };
 
 namespace {
