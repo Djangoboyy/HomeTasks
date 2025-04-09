@@ -18,6 +18,10 @@ if [ ! -d "$BUILD_FOLDER" ]; then
   mkdir -p "$BUILD_FOLDER"
 fi
 
+if [ ! -d "${SOURCE_FOLDER}/lib/" ]; then
+  mkdir -p "${SOURCE_FOLDER}/lib/"
+fi
+
 if [ ! -d "${SOURCE_FOLDER}/lib/googletest" ]; then
   git clone https://github.com/google/googletest ${SOURCE_FOLDER}/lib/googletest
   echo "[googletest] Зависимости подтянулись"
