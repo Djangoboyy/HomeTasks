@@ -1,4 +1,6 @@
 #!/bin/bash
+clear
+
 set -e
 
 # Вид сборки / суффикс в названии каталога сборки
@@ -15,16 +17,18 @@ if [ ! -d "$BUILD_FOLDER" ]; then
   mkdir -p "$BUILD_FOLDER"
 fi
 
-# cd "$BUILD_FOLDER"
+cd "$BUILD_FOLDER"
+
+cmake -G $BUILD_TYPE ../$SOURCE_FOLDER
+cmake --build .
+
+echo "Сборка завершена"
+
 
 # if [ ! -d "$SOURCE_FOLDER" ]; then
 #   mkdir -p "$SOURCE_FOLDER"
 # fi
 
-
-cmake -G $BUILD_TYPE ../$SOURCE_FOLDER
-
-cmake --build .
 
 #TARGET_DIR="$BUILD_FOLDER/bubble_sort"
 #if [ ! -d "$TARGET_DIR" ]; then
@@ -32,4 +36,3 @@ cmake --build .
 #fi
 #cp "$SOURCE_FOLDER/bubble_sort/run_bubble_sort.bat" "$TARGET_DIR/run_bubble_sort.bat"
 
-echo "Сборка завершена"

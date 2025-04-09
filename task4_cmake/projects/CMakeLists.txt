@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.2...3.27.5)
 
-project(kmms_prog_2023)
+project(AllMyProjects)
 
-add_subdirectory(merge_sort)
-
-set(CMAKE_SUPPRESS_REGENERATION true)
+add_subdirectory(bubble_sort)
+# set(CMAKE_SUPPRESS_REGENERATION true)
