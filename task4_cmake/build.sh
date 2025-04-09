@@ -9,6 +9,7 @@ set -e
 
 export BUILD_TYPE="Ninja"
 export BUILD_SUFFIX="ninja"
+export directory
 
 BUILD_FOLDER="build-${BUILD_SUFFIX}"
 SOURCE_FOLDER="projects"
@@ -17,22 +18,14 @@ if [ ! -d "$BUILD_FOLDER" ]; then
   mkdir -p "$BUILD_FOLDER"
 fi
 
+if [ ! -d "${SOURCE_FOLDER}/lib/googletest" ]; then
+  git clone https://github.com/google/googletest ${SOURCE_FOLDER}/lib/googletest
+  echo "[googletest] Зависимости подтянулись"
+fi
+
 cd "$BUILD_FOLDER"
 
 cmake -G $BUILD_TYPE ../$SOURCE_FOLDER
 cmake --build .
 
 echo "Сборка завершена"
-
-
-# if [ ! -d "$SOURCE_FOLDER" ]; then
-#   mkdir -p "$SOURCE_FOLDER"
-# fi
-
-
-#TARGET_DIR="$BUILD_FOLDER/bubble_sort"
-#if [ ! -d "$TARGET_DIR" ]; then
-#  mkdir -p "$TARGET_DIR"
-#fi
-#cp "$SOURCE_FOLDER/bubble_sort/run_bubble_sort.bat" "$TARGET_DIR/run_bubble_sort.bat"
-

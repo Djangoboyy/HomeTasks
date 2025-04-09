@@ -1,5 +1,4 @@
 #include "io.hpp"
-
 #include <iostream>
 
 void gra::print_array(const char* const comment, int* arr, const int size) {

@@ -1,19 +1,20 @@
 cmake_minimum_required(VERSION 3.2...3.27.5)
-project(BubbleSort)
+project(bubble_sort)
 
 # Исходники
 set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
-set(CPP_DIR ${SRC_DIR}/cpp)
-set(HPP_DIR ${SRC_DIR}/hpp)
+set(BB_CPP_DIR ${SRC_DIR}/cpp CACHE PATH "Доступность к реализации cpp сортировки из других сестринских проектов/подпроектов")
+set(BB_HPP_DIR ${SRC_DIR}/hpp CACHE PATH "Доступность к реализации hpp сортировки из других сестринских проектов/подпроектов")
+
+add_library(bubble_sort_modules STATIC
+    ${BB_CPP_DIR}/io.cpp
+    ${BB_CPP_DIR}/sortings.cpp
+)
+
+target_include_directories(bubble_sort_modules PUBLIC ${BB_HPP_DIR})
 
 add_executable(bubble_sort
     ${SRC_DIR}/main.cpp
-    ${CPP_DIR}/io.cpp
-    ${CPP_DIR}/sortings.cpp
 )
 
-target_include_directories(bubble_sort PRIVATE ${HPP_DIR})
-
-# Подключаем тесты
-# enable_testing()
-# add_subdirectory(tests)
+target_link_libraries(bubble_sort PRIVATE bubble_sort_modules)
