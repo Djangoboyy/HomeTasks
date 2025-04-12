@@ -18,4 +18,5 @@ find_package(GTest REQUIRED)
 
 # исходники проекта
 add_subdirectory(bubble_sort)
-add_subdirectory(tests)
+add_subdirectory(obuchaika)
+# add_subdirectory(tests)
