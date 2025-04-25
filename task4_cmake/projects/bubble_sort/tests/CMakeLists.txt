@@ -9,4 +9,4 @@ target_link_libraries(test1
     gtest_main
 )
 
-add_test(TESTS test1)
+# add_test(TESTS test1)

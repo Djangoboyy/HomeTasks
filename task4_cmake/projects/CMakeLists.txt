@@ -8,3 +8,4 @@ add_subdirectory(lib/googletest)
 # исходники проекта
 add_subdirectory(bubble_sort)
 add_subdirectory(obuchaika)
+add_subdirectory(LongNumbers)
