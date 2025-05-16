@@ -1,5 +1,10 @@
-project(Long_Number_sort_module)
+target_sources(long_number_lib
+	PRIVATE
+		long_number.cpp
+	PUBLIC
+		long_number.hpp
+)
 
-add_library(long_number_lib STATIC long_number.cpp)
-
-target_include_directories(long_number_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(long_number_lib PUBLIC
+	"${PROJECT_SOURCE_DIR}/src"
+)

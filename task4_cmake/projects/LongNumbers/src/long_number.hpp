@@ -25,6 +25,10 @@ namespace biv {
 			bool operator != (const LongNumber& x) const;
 			bool operator > (const LongNumber& x) const;
 			bool operator < (const LongNumber& x) const;
+
+			LongNumber add_abs(const LongNumber& x, const LongNumber& y, const int sign) const;
+			LongNumber sub_abs(const LongNumber& x, const LongNumber& y) const;
+			LongNumber multiply_abs(const LongNumber& x, const LongNumber& y) const;
 			
 			LongNumber operator + (const LongNumber& x) const;
 			LongNumber operator - (const LongNumber& x) const;
@@ -35,6 +39,9 @@ namespace biv {
 			int get_digits_number() const noexcept;
 			int get_rank_number(const int rank) const;
 			bool is_negative() const noexcept;
+			bool compare_abs(const LongNumber& x) const;
+			bool abs_equal(const LongNumber& x) const;
+			LongNumber abs(const LongNumber& x) const;
 			
 			friend std::ostream& operator << (std::ostream &os, const LongNumber& x);
 			
